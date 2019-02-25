@@ -1,0 +1,33 @@
+/*--------------------------------------------------
+  section
+--------------------------------------------------*/
+
+.section { 
+  padding: 30px 10px;
+
+  &.no-pad { padding: 0; }
+}
+
+@media (min-width: $media-medium + 1) {
+  .section { padding: 40px 20px 60px; }
+}
+
+/*--------------------------------------------------
+  article
+--------------------------------------------------*/
+
+.article { padding: 40px 0 0; }
+
+/*--------------------------------------------------
+  post-navigation
+--------------------------------------------------*/
+
+.post-navigation {
+  padding: 20px 10px;
+}
+
+@media (min-width: $media-medium + 1) {
+  .post-navigation {
+    padding: 40px 20px;
+  }
+}

@@ -1,0 +1,14 @@
+/*--------------------------------------------------
+  headline-section
+--------------------------------------------------*/
+
+.headline-section {
+  padding: 20px 10px;
+  border-bottom: 1px solid $grey-300;
+}
+
+@media (min-width: $media-medium + 1) {
+  .headline-section {
+    padding: 40px 20px;
+  }
+}

@@ -1,0 +1,52 @@
+/*--------------------------------------------------
+  nav-section
+--------------------------------------------------*/
+
+.nav-section {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding: $header-height_m 0 0;
+  transition: $transition-default;
+  background-color: $grey-100;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 2;
+
+  &.toggled { left: 0; }
+
+  @at-root { .admin-bar & { padding: $header-height_m + 46 0 0; } }
+}
+
+@media (min-width: $media-custom-2 + 1) {
+  .nav-section {
+    @at-root { .admin-bar & { padding: $header-height_m + 32 0 0; } }
+  }
+}
+
+@media (min-width: $media-medium + 1) {
+  .nav-section {
+    left: 0;
+    padding: $header-height 0 0;
+    background-color: rgba($color: $grey-100, $alpha: 0.75);
+
+    &.toggled { left: -300px; }
+
+    @at-root { .admin-bar & { padding: $header-height + 32 0 0; } }
+  }
+}
+
+@media (max-width: $media-medium) {
+  .nav-section { box-shadow: $z-depth; }
+}
+
+@media (max-width: $media-custom-1) {
+  .nav-section {
+    @at-root { .admin-bar & { padding: $header-height_m + 0 0; } }
+  }
+}

@@ -1,0 +1,47 @@
+/*--------------------------------------------------
+  card
+--------------------------------------------------*/
+
+@mixin card($extend: true) {
+  @if $extend {
+    @extend %card;
+  } @else {
+    & {
+      background-color: $card-color;
+      border: $card-border;
+      border-radius: $card-radius;
+      overflow: hidden;
+    }
+
+    & > div { overflow: hidden; }
+  }
+}
+
+%card { @include card($extend: false); }
+
+.card {
+  @include card;
+  
+  & > div { width: 100%; }
+
+  & .card-image {
+    background-color: $card-image-color;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      font-family: 'object-fit: cover;';
+    }
+  }
+
+  & .card-button,
+  & .card-content { padding: $card-padding_m; }
+}
+
+@media (min-width: $media-medium + 1) {
+  .card {
+    & .card-button,
+    & .card-content { padding: $card-padding; } 
+  }
+}

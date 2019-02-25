@@ -1,0 +1,17 @@
+/*--------------------------------------------------
+  container
+--------------------------------------------------*/
+
+@mixin container($extend: true) {
+  @if $extend {
+    @extend %container;
+  } @else {
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+}
+
+%container { @include container($extend: false); }
+
+.site-container { @include container; }

@@ -1,0 +1,55 @@
+/*--------------------------------------------------
+  site-branding
+--------------------------------------------------*/
+
+@mixin site-branding($extend: true) {
+  @if $extend {
+    @extend %site-branding;
+  } @else {
+    & {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 10px;
+      height: 100%;
+      color: $default-color;
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    &:hover { color: $default-color; }
+
+    & img { max-width: 100%; }
+
+    & .brand-name,
+    & .brand-description {
+      line-height: 1;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    & .brand-name {
+      color: inherit;
+      font-size: $large-size;
+    }
+
+    & .brand-description {
+      color: inherit;
+      font-size: $xsmall-size;
+      font-weight: 400;
+    }
+  }
+}
+
+%site-branding { @include site-branding($extend: false); }
+
+.site-branding { @include site-branding; }
+
+@media only screen and (min-width: $media-medium + 1) {
+  .site-branding {
+    & .brand-name { font-size: $extra-large-size + 0.3; }
+  }
+}

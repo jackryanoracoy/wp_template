@@ -1,0 +1,63 @@
+/*--------------------------------------------------
+  social-nav
+--------------------------------------------------*/
+
+@mixin social-nav($extend: true) {
+  @if $extend {
+    @extend %social-nav;
+  } @else {
+    & {
+      display: flex;
+      list-style: none;
+      margin: 0 -5px;
+    }
+
+    & > ul {
+      display: inherit;
+      list-style: inherit;
+      margin: inherit;
+    }
+
+    & li {
+      height: 50px;
+      padding: 0 5px;
+      overflow: hidden;
+    }
+
+    &:hover li {
+      opacity: 0.5;
+      transition: all 200ms ease-in-out;
+    }
+
+    & li:hover { opacity: 1; }
+
+    & a {
+      display: block;
+      width: 50px;
+      height: 50px;
+      color: $default-color;
+      font-size: $default-size;
+      line-height: 50px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 50%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    & a:hover { background-color: rgba($color:$grey-200, $alpha: 0.7); }
+  }
+}
+  
+%social-nav { @include social-nav($extend: false); }
+
+.social-nav { @include social-nav; }
+
+@media only screen and (max-width: $media-medium) {
+  .social-nav { 
+    flex-direction: column;
+
+    & a { padding: 0 10px; }
+  }
+}

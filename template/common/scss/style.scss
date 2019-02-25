@@ -1,0 +1,21 @@
+/*!
+Theme Name: WP_Template
+Theme URI: https://facebook.com/LNGRZ
+Author: Jack Ryan Oracoy
+Author URI: https://jackryanoracoy.github.io
+Description: This is a beta template
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: template
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+@import "variable";
+@import "mixin";
+@import "fonts";
+@import "base";
+@import "utility";
+@import "component";
+@import "layout";
+@import "print";

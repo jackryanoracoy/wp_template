@@ -1,0 +1,50 @@
+/*--------------------------------------------------
+  headings
+--------------------------------------------------*/
+
+@mixin title($extend: true) {
+  @if $extend {
+    @extend %title;
+  } @else {
+    & {
+      font-size: $large-size;
+      font-feature-settings: "palt";
+      font-family: $font-family-roboto-condensed;
+    }
+  }
+}
+
+%title { @include title($extend: false); }
+
+/*--------------------------------------------------
+  headline-title
+--------------------------------------------------*/
+
+.headline-title {
+  @include title;
+  text-transform: uppercase;
+}
+
+@media (min-width: $media-medium + 1) {
+  .headline-title { font-size: $extra-large-size; }
+}
+
+/*--------------------------------------------------
+  item-heading
+--------------------------------------------------*/
+
+.entry-title {
+  @include title;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+/*--------------------------------------------------
+  widget-title
+--------------------------------------------------*/
+
+.widget-title {
+  @include title;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}

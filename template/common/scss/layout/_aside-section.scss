@@ -1,0 +1,39 @@
+/*--------------------------------------------------
+  aside-section
+--------------------------------------------------*/
+
+.aside-section {
+  position: relative;
+  padding: 50px 10px;
+  z-index: 1;
+
+  & ul {
+    list-style: none;
+    margin: 0 0 20px;
+  }
+}
+
+@media (min-width: $media-medium + 1) {
+  .aside-section {
+    margin-left: 300px;
+    padding: 50px 20px;
+    transition: $transition-default;
+
+    &.toggled { margin-left: 0; }
+  }
+}
+
+@media (min-width: $media-xlarge + 1) {
+  .aside-section {
+    position: fixed;
+    top: $header-height + 20px;
+    right: 20px;
+    width: 250px;
+    margin: 0;
+    padding: 20px;
+    background-color: rgba($color: $grey-100, $alpha: 0.75);
+    border-radius: 4px;
+
+    @at-root { .admin-bar & { top: $header-height + 52px; } }
+  }
+}

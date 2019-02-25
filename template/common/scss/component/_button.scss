@@ -1,0 +1,58 @@
+/*--------------------------------------------------
+  btn
+--------------------------------------------------*/
+
+@mixin btn($extend: true) {
+  @if $extend {
+    @extend %btn;
+  } @else {
+    & {
+      display: inline-block;
+      padding: 0 30px;
+      color: $white !important;
+      font-size: $default-size;
+      line-height: $button-radius + $button-radius;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-radius: $button-radius;
+      background-color: $primary-color;
+      white-space: nowrap;
+      box-shadow: $z-depth;
+    }
+
+    &:hover { box-shadow: $z-depth-1; }
+
+    &:hover, &:focus, &:active, &:visited { color: $default-color; }
+
+    @at-root { .btn-cluster { margin: -$button-gap; & .btn { margin: $button-gap; } } }
+  }
+}
+  
+%btn { @include btn($extend: false); }
+
+.button { 
+  @include btn;
+
+  &.block { display: block; }
+
+  &.red {
+    color: $white;
+    background-color: $red-500;
+  }
+
+  &.green {
+    color: $white;
+    background-color: $green-500;
+  }
+
+  &.blue {
+    color: $white;
+    background-color: $blue-500;
+  }
+
+  &.orange {
+    color: $white;
+    background-color: $orange-500;
+  }
+}

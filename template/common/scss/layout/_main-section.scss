@@ -1,0 +1,27 @@
+/*--------------------------------------------------
+  main-section
+--------------------------------------------------*/
+
+.main-section {
+  position: relative;
+  min-height: 100vh;
+  padding: $header-height_m 0 0;
+}
+
+@media (min-width: $media-medium + 1) {
+  .main-section {
+    margin-left: 300px;
+    padding: $header-height 0 0;
+    transition: $transition-default;
+
+    &.toggled { margin-left: 0; }
+  }
+}
+
+@media (min-width: $media-xlarge + 1) {
+  .main-section {
+    margin-right: 280px;
+
+    @at-root { .no-sidebar & { margin-right: 0; } }
+  }
+}

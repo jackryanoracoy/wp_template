@@ -1,0 +1,11 @@
+@media print {
+
+  body {
+    font-family: inherit;
+    width: 100%;
+  }
+
+  section {
+    page-break-inside: avoid;
+  }
+}

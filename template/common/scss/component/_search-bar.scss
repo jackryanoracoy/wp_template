@@ -1,0 +1,118 @@
+/*--------------------------------------------------
+  search-bar
+--------------------------------------------------*/
+
+@mixin search-bar($extend: true) {
+  @if $extend {
+    @extend %search-bar;
+  } @else {
+    & {
+      position: relative;
+      width: 100%;
+      border-radius: 25px;
+    }
+
+    &:hover,
+    &:focus-within {
+      box-shadow: $z-depth;
+    }
+
+    & label { display: none; }
+
+    & input[type=text] {
+      position: relative;
+      width: 100%;
+      height: 50px;
+      padding: 10px 50px 10px 20px;
+      font-family: inherit;
+      font-size: $default-size;
+      background-color: $grey-100;
+      border: 1px solid $grey-300;
+      border-radius: 25px;
+      z-index: 2;
+    }
+
+    & input:focus::placeholder {
+      color: $default-color;
+    }
+
+    & button[type=submit] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 50px;
+      height: 50px;
+      color: $grey-500;
+      font-size: $default-size;
+      border: none;
+      background-color: transparent;
+      z-index: 2;
+    }
+
+    &:hover input,
+    & input:focus {
+      border-color: transparent;
+      background-color: $white;
+    }
+
+    & input, & button {
+      cursor: pointer;
+      outline: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+    }
+
+    & ::placeholder {
+      color: $grey-500;
+      font-size: $default-size;
+      text-transform: uppercase;
+    }
+
+    & .autocomplete-items {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 25px 0 0;
+      background-color: $white;
+      border-radius: 0 0 25px 25px;
+      overflow: hidden;
+      box-shadow: $z-depth;
+      z-index: 1;
+    }
+
+    & .autocomplete-items::before {
+      position: inherit;
+      top: 25px;
+      left: 0;
+      right: 0;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: $grey-100;
+    }
+    
+    & .autocomplete-items div {
+      padding: 10px 20px; 
+      cursor: pointer;
+    }
+
+    & .autocomplete-items div:first-child {
+      margin: 25px 0 0;
+    }
+    
+    & .autocomplete-items div:hover {
+      background-color: $grey-200; 
+    }
+    
+    & .autocomplete-active {
+      background-color: $primary-color !important; 
+      color: $white; 
+    }
+  }
+}
+
+%search-bar { @include search-bar($extend: false); }
+
+.search-bar { @include search-bar; }

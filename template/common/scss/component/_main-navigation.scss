@@ -1,0 +1,88 @@
+/*--------------------------------------------------
+  main-nav
+--------------------------------------------------*/
+
+@mixin main-nav($extend: true) {
+  @if $extend {
+    @extend %main-nav;
+  } @else {
+    & {
+      display: block;
+      width: 100%;
+      padding: 20px 0;
+      list-style: none;
+    }
+
+    & li {
+      position: relative;
+      display: block !important;
+      width: 100% !important;
+    }
+
+    & a {
+      display: block;
+      color: $default-color;
+      font-family: $button-font-family;
+      font-weight: 500;
+      text-decoration: none;
+      text-transform: uppercase;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    & li:hover { background-color: $grey-300; }
+
+    & ul {
+      display: none;
+      background-color: rgba($color: $grey-50, $alpha: 0.75);
+
+      & a { color: $default-color; }
+      & a:hover { background-color: $grey-200; }
+    }
+  }
+}
+  
+%main-nav { @include main-nav($extend: false); }
+
+.main-nav {
+  @include main-nav;
+
+  & li {
+
+    &::before {
+      position: absolute;
+      top: 20px;
+      left: 10px;
+      display: block;
+      width: 18px;
+      height: 18px;
+      text-align: center;
+      line-height: 17px;
+    }
+  }
+
+  & li.active {
+    background-color: rgba($color: $primary-color, $alpha: 0.1);
+
+    &::before, & a { color: $primary-color; }
+  }
+
+  & a {
+    padding: 22px 10px 22px 50px;
+    font-size: $medium-size;
+  }
+}
+
+@media only screen and (min-width: $media-medium + 1) {
+  .main-nav {
+
+    & li::before { left: 20px; }
+
+    & a {
+      padding: 22px 20px 22px 60px;
+      font-size: $default-size;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+/*--------------------------------------------------
+  footer-section
+--------------------------------------------------*/
+
+.footer-section {
+  position: relative;
+  color: $grey-200;
+  background-color: $grey-800;
+  border-top: 1px solid $white;
+  z-index: 1;
+
+  & a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  & .footer {
+    padding: 40px 20px;
+  }
+
+  & .footer-branding {
+    margin: 0 0 10px;
+    font-size: $medium-size;
+  }
+
+  & .footer-info {
+    font-size: $small-size;
+    font-weight: 300;
+  }
+
+  & .footer-branding,
+  & .footer-info {
+    text-align: center;
+  }
+}
+
+@media (min-width: $media-medium + 1) {
+  .footer-section {
+    margin-left: 300px;
+    color: $grey-500;
+    background-color: transparent;
+    transition: $transition-default;
+
+    &.toggled { margin-left: 0; }
+
+    & .footer-branding,
+    & .footer-info {
+      text-align: left;
+    }
+  }
+}
