@@ -16,9 +16,9 @@
   @include font-weight(300);
   src: local('Open Sans Condensed Light'),
        local('OpenSansCondensed-Light'),
-       url(../fonts/Open_Sans_Condensed/Open-Sans-Condensed-Light.woff2) format('woff2'),
-       url(../fonts/Open_Sans_Condensed/Open-Sans-Condensed-Light.woff) format('woff'),
-       url(../fonts/Open_Sans_Condensed/Open-Sans-Condensed-Light.ttf) format('truetype');
+       url(common/fonts/Open_Sans_Condensed/Open-Sans-Condensed-Light.woff2) format('woff2'),
+       url(common/fonts/Open_Sans_Condensed/Open-Sans-Condensed-Light.woff) format('woff'),
+       url(common/fonts/Open_Sans_Condensed/Open-Sans-Condensed-Light.ttf) format('truetype');
 }
 
 
@@ -27,7 +27,7 @@
   @include font-weight(700);
   src: local('Open Sans Condensed Bold'),
        local('OpenSansCondensed-Bold'),
-       url(../fonts/Open_Sans_Condensed/Open-Sans-Condensed-Bold.ttf) format('woff2'),
-       url(../fonts/Open_Sans_Condensed/Open-Sans-Condensed-Bold.woff) format('woff'),
-       url(../fonts/Open_Sans_Condensed/Open-Sans-Condensed-Bold.ttf) format('truetype');
+       url(common/fonts/Open_Sans_Condensed/Open-Sans-Condensed-Bold.ttf) format('woff2'),
+       url(common/fonts/Open_Sans_Condensed/Open-Sans-Condensed-Bold.woff) format('woff'),
+       url(common/fonts/Open_Sans_Condensed/Open-Sans-Condensed-Bold.ttf) format('truetype');
 }

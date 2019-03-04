@@ -16,9 +16,9 @@
   @include font-weight(400);
   src: local('Noto Sans'),
        local('NotoSans'),
-       url(../fonts/Noto_Sans/Noto-Sans.woff2) format('woff2'),
-       url(../fonts/Noto_Sans/Noto-Sans.woff) format('woff'),
-       url(../fonts/Noto_Sans/Noto-Sans.ttf) format('truetype');
+       url(common/fonts/Noto_Sans/Noto-Sans.woff2) format('woff2'),
+       url(common/fonts/Noto_Sans/Noto-Sans.woff) format('woff'),
+       url(common/fonts/Noto_Sans/Noto-Sans.ttf) format('truetype');
 }
 
 @font-face {
@@ -26,7 +26,7 @@
   @include font-weight(700);
   src: local('Noto Sans Bold'),
        local('NotoSans-Bold'), 
-       url(../fonts/Noto_Sans/Noto-Sans-Bold.woff2) format('woff2'),
-       url(../fonts/Noto_Sans/Noto-Sans-Bold.woff) format('woff'),
-       url(../fonts/Noto_Sans/Noto-Sans-Bold.ttf) format('truetype');
+       url(common/fonts/Noto_Sans/Noto-Sans-Bold.woff2) format('woff2'),
+       url(common/fonts/Noto_Sans/Noto-Sans-Bold.woff) format('woff'),
+       url(common/fonts/Noto_Sans/Noto-Sans-Bold.ttf) format('truetype');
 }

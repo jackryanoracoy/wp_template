@@ -25,15 +25,11 @@ if ( post_password_required() ) { return; }
         $template_comment_count = get_comments_number();
 
         if ( '1' === $template_comment_count ) {
-          printf(
-          esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'template' ),
-          '<span>' . get_the_title() . '</span>'
-          );
+          printf( esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'template' ), '<span>' . get_the_title() . '</span>' );
+
         } else {
           printf( esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $template_comment_count, 'comments title', 'template' ) ),
-          number_format_i18n( $template_comment_count ),
-          '<span>' . get_the_title() . '</span>'
-          );
+          number_format_i18n( $template_comment_count ), '<span>' . get_the_title() . '</span>' );
         }
 
         ?>
@@ -56,7 +52,7 @@ if ( post_password_required() ) { return; }
         <?php
 
         the_comments_navigation();
-
+        
         if ( ! comments_open() ) :
 
         ?>

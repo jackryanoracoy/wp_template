@@ -1,10 +1,10 @@
 // font family
-$font-family-opensans: 'Open Sans', sans-serif;
-$font-family-opensans-condensed: 'Open Sans Condensed', sans-serif;
+// $font-family-opensans: 'Open Sans', sans-serif;
+// $font-family-opensans-condensed: 'Open Sans Condensed', sans-serif;
 $font-family-roboto: 'Roboto', sans-serif;
 $font-family-roboto-condensed: 'Roboto Condensed', sans-serif;
-$font-family-notosans: 'Noto Sans', sans-serif;
-$font-family-notosans-jp: 'Noto Sans JP', sans-serif;
+// $font-family-notosans: 'Noto Sans', sans-serif;
+// $font-family-notosans-jp: 'Noto Sans JP', sans-serif;
 
 // Breakpoints.
 $media-xsmall: 480px;
@@ -12,6 +12,7 @@ $media-small: 720px;
 $media-medium: 1020px;
 $media-large: 1200px;
 $media-xlarge: 1400px;
+$media-xxlarge: 1600px;
 
 // Custom breakpoint
 $media-custom-1: 600px;
@@ -40,9 +41,11 @@ $col-width-list: 8.33333% 16.66666% 24.99999% 33.33333% 41.66666% 49.99999% 58.3
 
 // main colors
 $default-color: #424242;
-$primary-color: #F44336;
-$accent-color: #B71C1C;
-$hover-color: #D50000;
+$primary-color: #2196F3;
+$accent-color: #0D47A1;
+$hover-color: #0D47A1;
+
+$gradient-color: linear-gradient(to bottom right, rgba($color: #00BCD4, $alpha: 1), rgba($color: #2196F3, $alpha: 1));
 
 // color palette
 $red-50: #FFEBEE;
@@ -327,7 +330,8 @@ $xsmall-size: 1.2rem;
 $small-size: 1.3rem;
 $medium-size: 1.4rem;
 $large-size: 1.8rem;
-$extra-large-size: 2.2rem;
+$xlarge-size: 2.2rem;
+$xxlarge-size: 3rem;
 
 // line-height
 $small-height: 1.2;
@@ -337,6 +341,7 @@ $large-height: 2;
 // box-shadow
 $z-depth: 0 2px 2px 0 rgba(0,0,0,0.1), 0 1px 4px 0 rgba(0,0,0,0.05), 0 2px 1px -2px rgba(0,0,0,0.2);
 $z-depth-1: 0 4px 4px 0 rgba(0,0,0,0.15), 0 2px 8px 0 rgba(0,0,0,0.1), 0 2px 1px -2px rgba(0,0,0,0.2);
+$z-depth-2: 0 2px 4px 0px rgba(0,0,0,.1), 0 -4px 4px -4px rgba(0,0,0,.1);
 
 // button
 $menu-button-color: #424242;

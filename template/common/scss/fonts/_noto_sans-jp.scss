@@ -16,9 +16,9 @@
   @include font-weight(300);
   src: local('Noto Sans Japanese Regular'), 
        local('NotoSansJapanese-Regular'), 
-       url(../fonts/Noto_Sans_JP/Noto-Sans-Japanese-Light.woff2) format('woff2'),
-       url(../fonts/Noto_Sans_JP/Noto-Sans-Japanese-Light.woff) format('woff'),
-       url(../fonts/Noto_Sans_JP/Noto-Sans-Japanese-Light.ttf) format('truetype');
+       url(common/fonts/Noto_Sans_JP/Noto-Sans-Japanese-Light.woff2) format('woff2'),
+       url(common/fonts/Noto_Sans_JP/Noto-Sans-Japanese-Light.woff) format('woff'),
+       url(common/fonts/Noto_Sans_JP/Noto-Sans-Japanese-Light.ttf) format('truetype');
 }
 
 @font-face {
@@ -26,9 +26,9 @@
   @include font-weight(400);
   src: local('Noto Sans Japanese Regular'), 
        local('NotoSansJapanese-Regular'), 
-       url(../fonts/Noto_Sans_JP/Noto-Sans-Japanese-Regular.woff2) format('woff2'),
-       url(../fonts/Noto_Sans_JP/Noto-Sans-Japanese-Regular.woff) format('woff'),
-       url(../fonts/Noto_Sans_JP/Noto-Sans-Japanese-Regular.ttf) format('truetype');
+       url(common/fonts/Noto_Sans_JP/Noto-Sans-Japanese-Regular.woff2) format('woff2'),
+       url(common/fonts/Noto_Sans_JP/Noto-Sans-Japanese-Regular.woff) format('woff'),
+       url(common/fonts/Noto_Sans_JP/Noto-Sans-Japanese-Regular.ttf) format('truetype');
 }
 
 @font-face {
@@ -36,7 +36,7 @@
   @include font-weight(700);
   src: local('Noto Sans Japanese Bold'), 
        local('NotoSansJapanese-Bold'), 
-       url(../fonts/Noto_Sans_JP/Noto-Sans-Japanese-Bold.woff2) format('woff2'),
-       url(../fonts/Noto_Sans_JP/Noto-Sans-Japanese-Bold.woff) format('woff'),
-       url(../fonts/Noto_Sans_JP/Noto-Sans-Japanese-Bold.ttf) format('truetype');
+       url(common/fonts/Noto_Sans_JP/Noto-Sans-Japanese-Bold.woff2) format('woff2'),
+       url(common/fonts/Noto_Sans_JP/Noto-Sans-Japanese-Bold.woff) format('woff'),
+       url(common/fonts/Noto_Sans_JP/Noto-Sans-Japanese-Bold.ttf) format('truetype');
 }
