@@ -12,16 +12,13 @@
     }
     
     & label {
-      padding: 10px;
-      font-size: $medium-size;
-      font-weight: 300;
+      font-size: $default-size;
+      font-weight: 700;
       text-transform: uppercase;
-      line-height: 35px;
       white-space: nowrap;
     }
 
     & textarea {
-      width: 100%;
       max-width: 100%;
       height: 150px;
       resize: none;
@@ -29,22 +26,25 @@
     
     & input[type=text],
     & input[type=email],
-    & input[type=number] {
-      width: 100%;
+    & input[type=number],
+    & input[type=password] {
       height: 50px;
     }
 
     & textarea,
+    & input[type=url],
     & input[type=text],
     & input[type=email],
-    & input[type=number] {
-      margin: 0 0 10px;
-      padding: 15px 10px;
+    & input[type=number],
+    & input[type=password] {
+      padding: 15px 20px;
       font-size: $default-size;
       font-family: inherit;
       background-color: $grey-100;
-      border: 1px solid $grey-500;
-      border-radius: $card-radius;
+      border: 1px solid $grey-300;
+      border-radius: 4px;
+
+      &:focus { box-shadow: $z-depth; }
     }
 
     & button,
@@ -64,11 +64,13 @@
     
     & button,
     & textarea,
+    & input[type=url],
     & input[type=text],
     & input[type=email],
     & input[type=button],
     & input[type=number],
-    & input[type=submit] {
+    & input[type=submit],
+    & input[type=password] {
       outline: none;
       -moz-appearance: none;
       -webkit-appearance: none;
@@ -79,49 +81,73 @@
       font-size: $default-size;
       text-transform: uppercase;
     }
-
-    & .submit-container { 
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-    }
-
-    & .terms-message {
-      display: flex;
-      align-items: center;
-      margin: 0 0 10px;
-      color: $grey-500;
-      font-size: $small-size;
-
-      & > * { padding: 0 10px; }
-    }
-
-    & .thankyou-message {
-      margin: 0 0 10px;
-      color: $green-500;
-    }
-
-    & #honeypot { display: none; }
   }
 }
 
 %form { @include form($extend: false); }
 
-.contact-form { @include form; }
+/*----------------------------------------------
+    post-password-form
+-----------------------------------------------*/
 
-@media only screen and (min-width: $media-medium + 1) {
-  .contact-form { 
-    & label,
-    & textarea,
-    & input[type=text],
-    & input[type=email] {
-      margin: 0 0 20px;
-      padding: 15px 20px;
-    }
+.post-password-form {
+  @include form;
+  padding: $card-padding_m;
+  background-color: $card-color;
+  box-shadow: $z-depth;
 
-    & .terms-message,
-    & .thankyou-message { margin: 0 0 20px; }
+  & p {
+    margin: 0 0 20px;
+    text-align: center;
+
+    &:last-of-type { margin: 0; }
   }
 }
 
+@media (min-width: $media-medium + 1) {
+  .post-password-form {
+    padding: $card-padding;
+
+    & p { margin: 0 0 30px; }
+  }
+}
+
+@media (max-width: $media-xsmall) {
+  .post-password-form {
+
+    & label, & input { display: block; }
+    & input { margin: 20px auto 0 !important; }
+  }
+}
+
+/*----------------------------------------------
+    comment-form
+-----------------------------------------------*/
+
+.comment-form {
+  @include form;
+
+  & p {
+    margin: 0 0 20px;
+
+    &:last-of-type { margin: 0; }
+  }
+
+  & label {
+    display: block;
+    margin: 0 0 10px;
+  }
+
+  & textarea,
+  & input:not([type=submit]) {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media (min-width: $media-medium + 1) {
+  .comment-form { 
+    & p { margin: 0 0 30px; }
+  }
+}
 
